@@ -37,17 +37,3 @@ export const login = async (req, res, next) => {
         next(err)
     }
 }
-
-
-export const getAllUsers = async (req, res, next) => {
-
-    // if(failed) return next(createError(401, "You're not authenticated!"));
-    try {
-        // const hotel = await Hotel.find(req.params.id)
-        const users = await User.find();
-        res.status(200).json(users)
-
-    } catch (err) {
-        next(err);
-    }
-}
