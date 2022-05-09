@@ -1,8 +1,10 @@
+import cookieParser from "cookie-parser";
 import "dotenv/config"
 import express from "express"
 import mongoose from "mongoose";
 const app = express()
 
+app.use(cookieParser())
 app.use(express.json())
 
 // App imports
