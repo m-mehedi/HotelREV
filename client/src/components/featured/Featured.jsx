@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading, error } = useFetch("/hotels/countByCity?cities=Dhaka,Karnat,Mumbai")
-  console.log(data)
+  // console.log(data)
   return (
     <div className="featured">
       { loading ? ("Locading, Please wait") : (<> <div className="featuredItem">
